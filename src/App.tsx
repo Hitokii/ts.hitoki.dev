@@ -1,31 +1,21 @@
-import { ComponentProps } from 'react';
 import {
   Route,
-  Routes,
   BrowserRouter as Router,
+  Routes,
 } from "react-router-dom";
-import { useTheme } from './components/theme-provider';
-import { cn } from './lib/utils';
+import Navbar from './components/ui/navbar';
 import Home from './pages/home';
-
-const CodeText = (props: ComponentProps<'span'>) => {
-  return <span {...props} className={cn(props.className, 'bg-muted text-muted-foreground rounded font-mono text-sm p-1')} />
-}
+import { OrbitingCirclesDemo } from "./components/example/animated-orbitating-circle-demo";
+import { isMobile } from "react-device-detect";
 
 
 function App() {
-  const { theme } = useTheme()
   return (
     <Router>
-    <header>
-      hello world!
-    </header>
+      {isMobile ? <Navbar /> : null}
       <Routes>
-      <Route path="/" element={<Home />} />
-                <Route
-                    path="*"
-                    element={<h2>404</h2>}
-                />
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<h2>404</h2>} />
       </Routes>
     </Router>
   );

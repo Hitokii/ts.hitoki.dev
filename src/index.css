@@ -1,10 +1,27 @@
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
  
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --color-primary-50: #ffebe0;
+    --color-primary-100: #ffd7c2;
+    --color-primary-200: #ffaf85;
+    --color-primary-300: #ff8442;
+    --color-primary-400: #ff5d05;
+    --color-primary-500: #c64600;
+    --color-primary-600: #9e3700;
+    --color-primary-700: #752900;
+    --color-primary-800: #521d00;
+    --color-primary-900: #290e00;
+    --color-primary-950: #140700;
+  
+
+    --background: var(--color-primary-50);
     --foreground: 0 0% 3.9%;
 
     --card: 0 0% 100%;
@@ -13,8 +30,8 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
  
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: var(--color-primary-500);
+    --primary-foreground: var(--color-primary-50);
  
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
@@ -36,7 +53,7 @@
   }
  
   .dark {
-    --background: 0 0% 3.9%;
+    --background: #18181b;
     --foreground: 0 0% 98%;
  
     --card: 0 0% 3.9%;
