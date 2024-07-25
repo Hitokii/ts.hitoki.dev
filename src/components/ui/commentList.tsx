@@ -14,33 +14,41 @@ interface Item {
 let notifications = [
   {
     name: "Syhix",
-    description: "Un bon développeur web, qui m'a beaucoup aidé.",
-    time: "Je sais plus trop",
+    description: "Je suis son meilleur ami, sinon le site est cool",
+    time: "BFF",
 
     icon: "🐱",
     color: "#ff00ff",
   },
   {
     name: "Hitoki",
-    description: "Vraiment incroyable (lol)",
-    time: "1s ago",
+    description: "Ce site est fou!",
+    time: "Créateur du site",
     icon: "👤",
     color: "#C64600",
   },
   {
-    name: "New message",
-    description: "Magic UI",
-    time: "5m ago",
-    icon: "💬",
-    color: "#FF3D71",
+    name: "GladOS",
+    description: "Ce sujet est surprenant.",
+    time: "The cake is a lie.",
+    icon: "🎂",
+    color: "#FFD700",
   },
   {
-    name: "New event",
-    description: "Magic UI",
-    time: "2m ago",
-    icon: "🗞️",
+    name: "D4rkElo",
+    description: "Il est bieng.",
+    time: "GF",
+    icon: "🐇",
     color: "#1E86FF",
   },
+  {
+    name: "ChatGPT",
+    description: "Ton site est stylé et moderne! J'aime le design épuré et les détails techniques. Bon boulot! 🚀",
+    time: "IA",
+    icon: "🤖",
+    color: "#00FF00",
+  },
+
 ];
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
@@ -51,7 +59,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
       className={cn(
         "relative mx-auto min-h-fit w-full max-w-[400px] cursor-pointer overflow-hidden rounded-2xl p-4",
         // animation styles
-        "transition-all duration-200 ease-in-out hover:scale-[103%]",
+        "transition-all duration-500 ease-in-out hover:scale-[103%]",
         // light styles
         "bg-white [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
         // dark styles
@@ -94,7 +102,7 @@ export default function AnimatedCommentList({
         className,
       )}
     >
-      <AnimatedList>
+      <AnimatedList delay={2000}>
         {notifications.map((item, idx) => (
           <Notification {...item} key={idx} />
         ))}

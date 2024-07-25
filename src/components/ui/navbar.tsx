@@ -1,5 +1,4 @@
 import { GithubIcon, MenuIcon, MoonIcon, SunIcon } from "lucide-react"
-import { Button } from "./button"
 import Logo from "./logo"
 
 import {
@@ -9,10 +8,7 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu"
-import { isMobile } from "react-device-detect"
 import { useTheme } from "../theme-provider"
-import Meteors from "../magicui/meteors"
-import RetroGrid from "../magicui/retro-grid"
 
 
 
@@ -32,20 +28,20 @@ const pages = [
 export default function Navbar() {
     const { theme, setTheme } = useTheme()
     return (
-        <header style={{ padding: '3vh', paddingInline: '15vw' }}>
+        <header className="p-[2vh] px-[5vh]">
             <nav style={headerStyle}>
                 <>
                 <Logo />
-                <div style={{flex: 1}}></div>
+                <div className="flex-1"></div>
                 <DropdownMenu>
-                <DropdownMenuTrigger><MenuIcon/></DropdownMenuTrigger>
+                <DropdownMenuTrigger><MenuIcon className="scale-[200%]"/></DropdownMenuTrigger>
                 <DropdownMenuContent>
                     {pages.map(page => (
                         <DropdownMenuItem key={page.name} onClick={() => {document.location.href = page.link}}>{page.name}</DropdownMenuItem>
                     ))}
                 <DropdownMenuItem onClick={() => document.location.href = "https://github.com/hitokii"}><GithubIcon/> GitHub</DropdownMenuItem>
                 <DropdownMenuSeparator />
-                <DropdownMenuItem onClick={() => setTheme(theme == "dark" ? 'light' : 'dark')}>{theme == "dark" ? <MoonIcon/> : <SunIcon/>} Thèmes</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setTheme(theme === "dark" ? 'light' : 'dark')}>{theme === "dark" ? <MoonIcon/> : <SunIcon/>} Thèmes</DropdownMenuItem>
                 </DropdownMenuContent>
             </DropdownMenu>
                     </>

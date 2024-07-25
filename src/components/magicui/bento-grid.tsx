@@ -14,7 +14,7 @@ const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid w-full auto-rows-[22rem] grid-cols-3 gap-4",
+        "grid lg:scale-100 scale-100 w-full auto-rows-[22rem] lg:text-xl grid-cols-2 lg:grid-cols-3 text-3xl gap-4",
         className,
       )}
     >
@@ -56,9 +56,9 @@ const BentoCard = ({
     <div>{background}</div>
     {hoverable ?
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
-      <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" />
+      <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75 lg:scale-100 scale-150" />
       {name != "" ? 
-      <h3 className="text-xl font-semibold text-neutral-700 dark:text-neutral-300">
+      <h3 className="text-3xl lg:text-xl font-semibold text-neutral-700 dark:text-neutral-300">
         {name}
       </h3>
     : null}

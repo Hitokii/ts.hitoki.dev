@@ -1,4 +1,4 @@
-import { BookMarked, FolderGit2, Github, MessageSquare } from "lucide-react";
+import { BookMarked, BookMarkedIcon, FolderGit2, Github, MessageSquare } from "lucide-react";
 
 import { BentoCard, BentoGrid } from "@/components/magicui/bento-grid";
 import Marquee from "@/components/magicui/marquee";
@@ -16,16 +16,20 @@ const files = [
     body: "Yummy Noodle est un projet scolaire qui consiste à créer un site web pour un restaurant fictif.",
   },
   {
-    name: "logo.svg",
-    body: "Scalable Vector Graphics is an Extensible Markup Language-based vector image format for two-dimensional graphics with support for interactivity and animation.",
+    name: "Hitoki.dev",
+    body: "Ce site est 'surprenament' un de mes projets haha.",
   },
   {
-    name: "keys.gpg",
-    body: "GPG keys are used to encrypt and decrypt email, files, directories, and whole disk partitions and to authenticate messages.",
+    name: "Music-App",
+    body: "Une application de musique qui sert de widget pour Hyprland.",
   },
   {
-    name: "seed.txt",
-    body: "A seed phrase, seed recovery phrase or backup seed phrase is a list of words which store all the information needed to recover Bitcoin funds on-chain.",
+    name: "Discord-Bot",
+    body: "Quelques bots discord pour apprendre le JS.",
+  },
+  {
+    name: "Aperture Science",
+    body: "A Venir !",
   },
 ];
 
@@ -36,7 +40,7 @@ const features = [
     description: "Voir mes projets les plus récents.",
     href: "#projets",
     cta: "Voir tous les projets",
-    className: "col-span-3 lg:col-span-1",
+    className: "col-span-2",
     background: (
       <Marquee
         pauseOnHover
@@ -72,10 +76,19 @@ const features = [
     description: "Voir les avis des personnes qui ont utilisé mes services.",
     href: "#",
     cta: "Voir les avis",
-    className: "col-span-1 lg:col-span-1",
+    className: "col-span-2 lg:col-span-1",
     background: (
       <AnimatedCommentList className="absolute right-1/2 top-4 h-[300px] w-[400px] transform translate-x-1/2 border-none transition-all duration-300 ease-out [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)] group-hover:scale-105" />
     ),
+  },
+  {
+    Icon: "none",
+    name: "Connaissances",
+    description: "Supports 100+ integrations and counting.",
+    href: "#",
+    cta: "Learn more",
+    className: "col-span-2 lg:col-span-1",
+    background: (<div><BookMarkedIcon className="absolute top-0 left-50 text-neutral-700 w-full h-full scale-50"/></div>),
   },
   {
     Icon: "none",
@@ -83,11 +96,11 @@ const features = [
     description: "Les outils utilisés pour la création de ce site.",
     href: "",
     cta: "",
-    className: "md:max-xl:hidden col-span-3 lg:col-span-1 hover:scale-100",
+    className: "col-span-1",
     hoverable: false,
     background: (
       <>
-      <div className="absolute flex flex-col place-content-around w-full h-[30vh] p-5">
+      <div className="absolute flex flex-col place-content-around p-5">
           <div>Langage : TypeScript</div>
           <div>Framework : React</div>
           <div>Library : <a href="#link">ShadCN-ui</a> | <a href="#link">MagicUI</a></div>
@@ -106,21 +119,12 @@ const features = [
     ),
   },
   {
-    Icon: BookMarked,
-    name: "Connaissances",
-    description: "Supports 100+ integrations and counting.",
-    href: "#",
-    cta: "Learn more",
-    className: "col-span-3 lg:col-span-2",
-    background: (<></>),
-  },
-  {
     Icon: "none",
     name: "",
     description: "",
     href: "#",
     cta: "",
-    className: "col-span-1 lg:col-span-1",
+    className: "col-span-1 lg:col-span-1 text-2xl",
     background: (
       <pre className="text-center p-5">
        .<br/>

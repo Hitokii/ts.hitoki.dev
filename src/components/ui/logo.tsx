@@ -7,7 +7,7 @@ export default function Logo() {
 
     const stroke: CSSProperties = {
         fill: 'none',
-        stroke: useTheme().theme == "light" ? "black" : "white",
+        stroke: useTheme().theme === "light" ? "black" : "white",
         strokeLinecap: 'round',
         strokeLinejoin: 'round',
         strokeWidth: '50px',
