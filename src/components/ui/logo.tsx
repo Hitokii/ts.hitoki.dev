@@ -13,7 +13,7 @@ export default function Logo() {
         strokeWidth: '50px',
     }
     
-    return (<>
+    return (<div onClick={() => document.location.href = "/"} className="cursor-pointer hover:scale-110 transition duration-500">
     <svg id="Layer_2" style={{width: 48}} data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 319.84 498.72">
       <g id="Layer_1-2" data-name="Layer 1">
         <g>
@@ -22,6 +22,6 @@ export default function Logo() {
         </g>
       </g>
     </svg>
-    </>
+    </div>
     )
 }

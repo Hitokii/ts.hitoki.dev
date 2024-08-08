@@ -6,7 +6,7 @@ module.exports = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   theme: {
     extend: {
       colors: {
@@ -106,7 +106,7 @@ module.exports = {
             "offset-distance": "100%",
           },
         },
-        
+
       },
       animation: {
         grid: "grid 15s linear infinite",
@@ -120,5 +120,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwindcss-animate"), require('@tailwindcss/line-clamp')],
 }
