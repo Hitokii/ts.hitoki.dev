@@ -21,7 +21,7 @@ export default function Projets() {
             }
             link="https://github.com/Hitokii/Blackjack"
             img=""
-            color="#fff dark:#000"
+            color="#fff"
           />
         </TabsContent>
       </div>
