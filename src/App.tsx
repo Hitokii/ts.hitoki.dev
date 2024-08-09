@@ -1,4 +1,4 @@
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./components/ui/navbar";
 import Home from "./pages/home";
 import { isMobile } from "react-device-detect";
