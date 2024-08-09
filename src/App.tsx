@@ -1,9 +1,4 @@
-import {
-  Route,
-  HashRouter as Router,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { Route, HashRouter as Router, Routes } from "react-router-dom";
 import Navbar from "./components/ui/navbar";
 import Home from "./pages/home";
 import { isMobile } from "react-device-detect";
@@ -18,7 +13,6 @@ import Projets from "./pages/projets";
 
 function App() {
   const { theme, setTheme } = useTheme();
-  let navigate = useNavigate();
   return (
     <Router>
       <Toaster />
@@ -29,10 +23,16 @@ function App() {
           <BlurFade key={"Logo"} inView>
             <div className="flex gap-5">
               <Logo />
-              <Button variant={"outline"} onClick={() => navigate("/projets")}>
+              <Button
+                variant={"outline"}
+                onClick={() => (document.location.href = "#/projets")}
+              >
                 Projets
               </Button>
-              <Button variant={"outline"} onClick={() => navigate("/avis")}>
+              <Button
+                variant={"outline"}
+                onClick={() => (document.location.href = "#/avis")}
+              >
                 Avis
               </Button>
               <Button variant={"outline"}>Connaissances</Button>
