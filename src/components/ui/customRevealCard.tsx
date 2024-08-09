@@ -41,7 +41,7 @@ export const CustomRevealCard = ({
           </Button>
         </BoxReveal>
       </div>
-      <img src="chrome://branding/content/about-logo.png" alt="" />
+      <img src={img} alt="" />
     </div>
   );
 };
